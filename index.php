@@ -9,7 +9,7 @@
     <?php  
         echo "Welcome to our page! "; 
     ?>
-    <text style="text-align:center;"><b>You will fly in time with us</b></text>
+    <p>You will fly in time with us</p>
     <button>Login</button>
     <button>Register</button>
     </body>    
