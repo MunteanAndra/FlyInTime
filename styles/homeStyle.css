@@ -1,0 +1,12 @@
+body{
+    height: 100%;
+    margin: 15%;
+    display: grid;
+    justify-items: center;
+    background-color: #f4f1deff;
+    
+}
+
+h1{
+    font-family: 'poppins',sans-serif;
+}

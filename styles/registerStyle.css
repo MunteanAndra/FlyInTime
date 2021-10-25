@@ -1,12 +1,47 @@
-body{
-    height: 100%;
-    margin:15%;
-    display: grid;
-    justify-items: center;
-    background-color: #f4f1deff;
-    
+.p1, .p2, .p3, .p4, .p5{
+    font-family:'poppins',sans-serif;
+}
+input[type=text] {
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 9px 47px;;
+}
+
+input[type=button], button[type=submit] {
+   background-color: white;
+   padding: 16px 32px;
+   text-decoration: none;
+   margin: 4px 2px;
+   cursor: pointer;
+   border: 2px solid;
+   border-radius: 4px;
 }
 
 .giphy{
-    vertical-align: text-top;
+
+    height: auto;
+    width: auto;
+}
+
+body{
+    height: auto;
+    width: auto;
+    margin: 90px;
+    margin-bottom: 100px;
+    display: grid;
+    justify-items: center;
+    background-color: #f4f1deff;
+}
+
+h1{
+    font-family: 'poppins',sans-serif;
+    margin-right: 105%;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+h1 a{
+    color: black;
+    text-decoration: none;
 }
