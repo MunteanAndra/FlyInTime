@@ -1,0 +1,76 @@
+body{
+    height: 100%;
+    margin: 15%;
+    display: grid;
+    justify-items: center;
+    background-color: #f4f1deff;
+    
+}
+
+h1{
+    font-family: 'poppins',sans-serif;
+    margin-right: 105%;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+h1 a{
+    color: black;
+    text-decoration: none;
+}
+
+p{
+    font-family: "Avenir Next", sans-serif;
+    font-style: italic;
+    margin-left: 43%;
+    margin-top: 160px;
+    font-size: 35px;
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    color: black;
+    text-decoration: none;
+
+    filter: url(#motion-blur-filter);
+}
+
+h2, .p1{
+    font-family: 'poppins',sans-serif;
+
+}
+
+.p1{
+    color: black;
+    text-decoration: none;
+}
+
+.card{
+    width: 200px;
+    height: 370px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 25px 20px;
+    background-image: url(../gifs/airportsketch.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: #f4f1deff;
+    text-align: center;
+}
