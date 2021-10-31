@@ -15,12 +15,13 @@
     if($row['password']==$password)
     {
         $_SESSION['email']=$mail;
+        $_SESSION['userlogged']=true;
         header("Location:../HomePage/home.php");
     }
     else{
         
         $_SESSION['msg_type']="danger";
-        $_SESSION['loginmessage']="Please complete all the fileds";
+        $_SESSION['loginmessage']="Password or email is inncorect.";
         header("Location:login.php");
     }
  }

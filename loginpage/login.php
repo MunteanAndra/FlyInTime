@@ -40,9 +40,44 @@
             color: black;
             text-decoration: none;
         }
+
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+
     </style>
 
     <body>
+    <?php
+        session_start();
+        if(isset($_SESSION['loginmessage']))
+        { ?>
+            <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Please try again!</strong>  <?php echo $_SESSION['loginmessage']; ?>
+            </div>
+        <?php    
+            
+            unset($_SESSION['loginmessage']);
+        }
+    ?>
     <form action="loginService.php" method="POST" id="formlogin">
        <h1><a href="../index.php">FlyInTime</a></h1>
        <p class="p1"><b>e-mail</b></p> <input type="text" name="email"><br>
@@ -53,6 +88,7 @@
     <div class="gifdiv">
        <img src="../gifs/245711_4e0da7eb414d4bc990969b1b4a516a7d~mv2.gif" height=40% width=40%></img>
     </div>
+    
     </body> 
        
 </html>
