@@ -135,9 +135,44 @@
         }
     
     }
+
+    .alert {
+            padding: 20px;
+            background-color: #04AA6D;
+            color: white;
+        }
+
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .closebtn:hover {
+        color: black;
+    }
+
     </style>
 
     <body>
+    <?php
+        session_start();
+        if(isset($_SESSION['bookingmessage']))
+        { ?>
+            <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Thank you!</strong>  <?php echo $_SESSION['bookingmessage']; ?>
+            </div>
+        <?php    
+            
+            unset($_SESSION['bookingmessage']);
+        }
+    ?>
         <form action="" method="POST">
             <h1><a href="../index.php">FlyInTime</a></h1>
             <div class="direct">
