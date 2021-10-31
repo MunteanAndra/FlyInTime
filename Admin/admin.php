@@ -83,6 +83,7 @@
             <nav>
                 <ul>
                     <li><a href="add.php"><b>Add flights</a></li>
+                    <li><a href="bookings.php"><b>Booked flights</a></li>
                     <li><a href="../HomePage/home.php"><b>Home</a></li>
                 </ul>
             </nav> 
