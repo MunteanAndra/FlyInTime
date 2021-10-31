@@ -17,12 +17,19 @@
 
             if($row['email']!=$mail)
             {
-                $sql="insert into loginform (email,password,fname,lname,role) values ('$mail','$password','$firstname','$lastname','$role')";
+                $sql="insert into loginform (email,password,fname,lname,rol) values ('$mail','$password','$firstname','$lastname','$role')";
                 $query=mysqli_query($connect,$sql);
+                $_SESSION['email']=$mail;
+                $_SESSION['userlogged']=true;
                 header('Location:../HomePage/home.php');
             }
             else
-            echo "nu merge";
+            {
+                $_SESSION['msg_type']="danger";
+                $_SESSION['registermessage']="Account with this email already exists.";
+                header("Location:register.php");
+            }
+            
         }
 
         if(isset($_POST["login"]))

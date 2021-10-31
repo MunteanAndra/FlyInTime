@@ -10,6 +10,7 @@
         .p1, .p2, .p3, .p4, .p5{
             font-family:'poppins',sans-serif;
         }
+
         input[type=text] {
             border: 2px solid;
             border-radius: 4px;
@@ -49,12 +50,48 @@
             top: 8px;
             left: 16px;
         }
+
         h1 a{
             color: black;
             text-decoration: none;
         }
+
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+        }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .closebtn:hover {
+            color: black;
+        }
+        
     </style>
     <body>
+    <?php
+        session_start();
+        if(isset($_SESSION['registermessage']))
+        { ?>
+            <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Please write another email!</strong>  <?php echo $_SESSION['registermessage']; ?>
+            </div>
+        <?php    
+            
+            unset($_SESSION['registermessage']);
+        }
+    ?>
     <div class="giphy">
         <img src="../gifs/sign-up-baloon-big.png"></img>
     </div>
