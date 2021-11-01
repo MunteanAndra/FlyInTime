@@ -60,6 +60,7 @@
     </style>
 
     <body>
+        <?php ?>
         <form action="" method="POST">
             <h1><a href="home.php">FlyInTime</a></h1> 
             <div class="info">

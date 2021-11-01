@@ -46,6 +46,7 @@
         }
     </style>    
     <body>
+            <?php ?>
     <form action="adminService.php" method="POST">
             <h1><a href="admin.php">FlyInTime-Admin</a></h1>
             <div class="photo">

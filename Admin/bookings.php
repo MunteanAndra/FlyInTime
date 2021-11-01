@@ -71,6 +71,7 @@
                    <th>Email</th>
                    <th>Birth date</th>
                    <th>Gender</th>
+                   <th>Destination</th>
                 </tr>   
            </thead>
            <?php
@@ -83,6 +84,7 @@
                  <td><?php echo $row['email']; ?> </td>
                  <td><?php echo $row['birth']; ?> </td>
                  <td><?php echo $row['sex']; ?> </td>
+                 <td><?php echo $row['dest']; ?> </td>
              </tr>   
              <?php    
              endwhile;
