@@ -9,7 +9,7 @@
     <style>
     h1{
         font-family: 'poppins',sans-serif;
-        margin-right: 105%;
+        
         position: absolute;
         top: 8px;
         left: 16px;
@@ -21,7 +21,7 @@
     }
 
     .direct{
-        margin-left: 55%;
+        margin-left: 50%;
         position: absolute;
         top: 14px;
         left: 16px;
@@ -36,7 +36,7 @@
     nav ul li{
         display: inline-block;
         list-style: none;
-        margin: 10px 30px;
+        margin: 10px 20px;
     }
 
     nav ul li a{
@@ -192,6 +192,7 @@
                     <li><a href="contact.php"><b>Contact</a></li>
                     <li><a href="about.php"><b>About</a></li>
                     <li><a href="end.php"><b>Sign Out</a></li>
+                    <li><a href=""> <b> <?php echo $mail;?></a></li>
                 </ul>
             </nav> 
             </div>   
