@@ -50,10 +50,10 @@
 
     <body>
     <?php
-        require_once 'adminService.php';
+        require_once 'bookingsService.php';
         session_start();
     ?>     
-    <form action="adminService.php" method="POST">
+    <form action="bookingsService.php" method="POST">
         <h1><a href="admin.php">FlyInTime-Admin</a></h1>
     <div>
        <?php
@@ -72,6 +72,7 @@
                    <th>Birth date</th>
                    <th>Gender</th>
                    <th>Destination</th>
+                   <th>Action</th>
                 </tr>   
            </thead>
            <?php
@@ -85,9 +86,39 @@
                  <td><?php echo $row['birth']; ?> </td>
                  <td><?php echo $row['sex']; ?> </td>
                  <td><?php echo $row['dest']; ?> </td>
+                 <td>
+                             <a href="bookings.php?edit=<?php echo $row['id'];?>">Edit</a>
+                             <a href="bookingsService.php?delete=<?php echo $row['id'];?>">Delete</a>
+                </td>   
              </tr>   
              <?php    
              endwhile;
              ?>
        </table>
+       <div class="editdata">
+            <input type="hidden" name="id" value="<?php echo $id;?>"> 
+                <div class="fname">
+                        <label><b>First name</b></label>
+                        <input type="text" value="<?php echo $fname;?>" name="fname">
+                </div>
+                <div class="lname">
+                        <label><b>Last Name</b></label>
+                        <input type="text" value="<?php echo $lname;?>" name="lname">
+                </div>
+                <div class="email">
+                        <label><b>Email</b></label>
+                        <input type="text" value="<?php echo $email;?>" name="email">
+                </div>
+                <div class="birth">
+                        <label><b>Birth date</b></label>
+                        <input type="date" value="<?php echo $birth;?>" name="birth">
+                </div>
+                <div class="sex">
+                        <label><b>Gender</b></label>
+                        <input type="text" value="<?php echo $sex;?>" name="sex">
+                </div>
+                <div>
+                <button type="submit" name="confirm">Confirm</button>
+                </div> 
+            </div>   
     </div>  
